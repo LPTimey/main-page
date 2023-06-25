@@ -36,13 +36,15 @@ header {
 }
 
 footer {
-  position: absolute;
-  bottom: 10;
   display: flex;
   background-color: var(--bg-color-2);
   border-radius: 1.5rem;
   min-height: 30px;
   box-sizing: border-box;
+}
+
+main {
+  margin-top: 3rem;
 }
 
 img {
@@ -56,6 +58,8 @@ a {
 .img_link {
   display: flex;
   color: var(--text-1);
+  justify-items: center;
+  align-items: center;
 }
 
 ul {
@@ -190,7 +194,7 @@ ul {
 
 .landing-page .content .container {
   display: flex;
-  align-items: center;
+  //align-items: center;
   justify-content: space-between;
   gap: 140px;
   min-height: calc(100vh - 80px);
