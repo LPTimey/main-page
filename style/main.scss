@@ -10,7 +10,7 @@
   --button-text: #fff;
   --text-1: black;
   --text-2: #5d5d5d;
-  --transition-time-1: 1s;
+  --transition-time-1: 0.1s;
   --transition-time-2: 0.5s;
   --transition-time-3: 0.3s;
 }
@@ -18,14 +18,8 @@
   :root {
     --bg-color-1: #18122b;
     --bg-color-2: #393053;
-    --button-1: #6c63ff;
-    --button-2: #3e7bfa;
-    --button-text: #fff;
     --text-1: white;
     --text-2: lightgray;
-    --transition-time-1: 1s;
-    --transition-time-2: 0.5s;
-    --transition-time-3: 0.3s;
   }
 }
 
@@ -41,12 +35,27 @@ header {
   border-radius: 1.5rem;
 }
 
+footer {
+  position: absolute;
+  bottom: 10;
+  display: flex;
+  background-color: var(--bg-color-2);
+  border-radius: 1.5rem;
+  min-height: 30px;
+  box-sizing: border-box;
+}
+
 img {
   border-radius: 1rem;
 }
 
 a {
   text-decoration: none;
+}
+
+.img_link {
+  display: flex;
+  color: var(--text-1);
 }
 
 ul {
@@ -162,21 +171,21 @@ ul {
   padding: 10px 20px;
   color: var(--button-text);
   background-color: var(--button-1);
-  transition: var(--transition-time-1);
+  transition: var(--transition-time-2);
 }
 .landing-page header .links li:last-child:hover {
   background-color: var(--button-2);
   // font-size: larger; //FIXME: makes mobile-view glitch out
-  transition: var(--transition-time-1);
+  transition: var(--transition-time-2);
 }
 .landing-page header .links li:last-child a {
   color: var(--button-text);
-  transition: var(--transition-time-1);
+  transition: var(--transition-time-2);
 }
 
 .landing-page header .links li:not(:last-child) a:hover {
   color: var(--button-2);
-  transition: var(--transition-time-1);
+  transition: var(--transition-time-2);
 }
 
 .landing-page .content .container {
@@ -224,12 +233,12 @@ ul {
   color: var(--button-text);
   //background-color: #6c63ff;
   background-color: var(--button-1);
-  transition: var(--transition-time-1);
+  transition: var(--transition-time-2);
 }
 .landing-page .content .info button:hover {
   background-color: var(--button-2);
-  font-size: larger;
-  transition: var(--transition-time-1);
+  // font-size: larger; //FIXME: makes mobile-view glitch out
+  transition: var(--transition-time-2);
 }
 
 .landing-page .content .image img {

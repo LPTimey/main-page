@@ -1,7 +1,9 @@
 {
   "rust-analyzer.cargo.features": ["ssr, csr"],
-  "cSpell.words": ["actix", "bindgen", "leptos", "preferrable", "Ruland"],
+  "cSpell.words": ["actix", "bindgen", "leptos", "preferrable", "Ruland"]
+  /*
   "emmet.includeLanguages": {
     "rust": "html",
   },
+  */
 }
