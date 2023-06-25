@@ -166,7 +166,7 @@ ul {
 }
 .landing-page header .links li:last-child:hover {
   background-color: var(--button-2);
-  font-size: larger;
+  // font-size: larger; //FIXME: makes mobile-view glitch out
   transition: var(--transition-time-1);
 }
 .landing-page header .links li:last-child a {
