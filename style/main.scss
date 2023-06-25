@@ -1,4 +1,239 @@
-body {
-	font-family: sans-serif;
-	text-align: center;
+/* Start Global Rules https://codepen.io/Mohamed-Anwar97/pen/yLOwGed */
+* {
+  box-sizing: border-box;
 }
+:root {
+  --bg-color-1: #fff;
+  --bg-color-2: #d6d6d6;
+  --button-1: #6c63ff;
+  --button-2: #3e7bfa;
+  --button-text: #fff;
+  --text-1: black;
+  --text-2: #5d5d5d;
+  --transition-time-1: 1s;
+  --transition-time-2: 0.5s;
+  --transition-time-3: 0.3s;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color-1: #18122b;
+    --bg-color-2: #393053;
+    --button-1: #6c63ff;
+    --button-2: #3e7bfa;
+    --button-text: #fff;
+    --text-1: white;
+    --text-2: lightgray;
+    --transition-time-1: 1s;
+    --transition-time-2: 0.5s;
+    --transition-time-3: 0.3s;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg-color-1);
+}
+
+header {
+  position: sticky;
+  top: 10;
+  background-color: var(--bg-color-2);
+  border-radius: 1.5rem;
+}
+
+img {
+  border-radius: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+
+/* Start Landing Page */
+.landing-page header {
+  min-height: 80px;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .landing-page header {
+    min-height: auto;
+    display: initial;
+  }
+}
+
+.landing-page header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .landing-page header .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.landing-page header .logo {
+  color: var(--text-2);
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.landing-page header .logo:hover {
+  color: var(--text-1);
+}
+
+@media (max-width: 767px) {
+  .landing-page header .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.landing-page header .links {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .landing-page header .links {
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+.landing-page header .links li {
+  margin-left: 30px;
+  color: var(--text-1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.landing-page header .links li a {
+  color: var(--text-1);
+}
+
+@media (max-width: 767px) {
+  .landing-page header .links li {
+    margin-left: auto;
+  }
+}
+
+.landing-page header .links li:last-child {
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: var(--button-text);
+  background-color: var(--button-1);
+  transition: var(--transition-time-1);
+}
+.landing-page header .links li:last-child:hover {
+  background-color: var(--button-2);
+  font-size: larger;
+  transition: var(--transition-time-1);
+}
+.landing-page header .links li:last-child a {
+  color: var(--button-text);
+  transition: var(--transition-time-1);
+}
+
+.landing-page header .links li:not(:last-child) a:hover {
+  color: var(--button-2);
+  transition: var(--transition-time-1);
+}
+
+.landing-page .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(100vh - 80px);
+}
+
+@media (max-width: 767px) {
+  .landing-page .content .container {
+    gap: 0;
+    min-height: calc(100vh - 101px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 767px) {
+  .landing-page .content .info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+.landing-page .content .info h1 {
+  color: var(--text-2);
+  font-size: 44px;
+}
+
+.landing-page .content .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: var(--text-2);
+}
+
+.landing-page .content .info button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: var(--button-text);
+  //background-color: #6c63ff;
+  background-color: var(--button-1);
+  transition: var(--transition-time-1);
+}
+.landing-page .content .info button:hover {
+  background-color: var(--button-2);
+  font-size: larger;
+  transition: var(--transition-time-1);
+}
+
+.landing-page .content .image img {
+  max-width: 100%;
+}
+
+/* End Landing Page */
