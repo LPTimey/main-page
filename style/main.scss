@@ -37,6 +37,9 @@ header {
 
 footer {
   display: flex;
+  // flex-direction: row; 
+  justify-content: center;
+  align-items: center;
   background-color: var(--bg-color-2);
   border-radius: 1.5rem;
   min-height: 40px;
@@ -54,11 +57,13 @@ a {
   text-decoration: none;
 }
 
-.img_link {
+.footer_link {
   display: flex;
   color: var(--text-1);
   justify-items: center;
   align-items: center;
+  width: max-content;
+  margin-right: 30px;
 }
 
 ul {
@@ -141,7 +146,7 @@ ul {
   }
 }
 
-.landing-page header .links {
+.links {
   display: flex;
   align-items: center;
 }
@@ -196,7 +201,7 @@ ul {
   //align-items: center;
   justify-content: space-between;
   gap: 140px;
-  min-height: calc(100vh - 80px);
+  // min-height: calc(100vh - 80px);
 }
 
 @media (max-width: 767px) {
