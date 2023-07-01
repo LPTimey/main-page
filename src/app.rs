@@ -19,9 +19,13 @@ pub fn App(cx: Scope) -> impl IntoView {
 
         // content for this welcome page
         <Router>
+            <Header/>
                 <Routes>
                     <Route path="" view=|cx| view! { cx, <HomePage/> }/>
+                    <Route path="battleship" view= |cx| view! {cx, <main>"Battleship Test"</main>} />
+                    <Route path="monster_hunter" view= |cx| view! {cx, <p>"Monster Hunter Test"</p>} />
                 </Routes>
+            <Footer/>
         </Router>
     }
 }
@@ -31,32 +35,30 @@ pub fn App(cx: Scope) -> impl IntoView {
 fn HomePage(cx: Scope) -> impl IntoView {
     view! { cx,
         //<!-- Start Landing Page https://codepen.io/Mohamed-Anwar97/pen/yLOwGed -->
-        <div class="landing-page">
-            <Header/>
-            <main class="content">
-                <article class="container">
-                    <div class="info">
-                        <h1>"Looking For Inspiration"</h1>
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste, Repellendus odit nihil"</p>
-                        <button>"Button name"</button>
-                    </div>
-                    <div class="image">
-                        <img src="https://i.postimg.cc/65QxYYzh/001234.png"/>
-                    </div>
-                </article>
-                <article class="container">
-                    <div class="info">
-                        <h1>"Looking For Inspiration 2"</h1>
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste, Repellendus odit nihil"</p>
-                        <button>"Button name 2"</button>
-                    </div>
-                    <div class="image">
-                        <img src="https://i.postimg.cc/65QxYYzh/001234.png"/>
-                    </div>
-                </article>
-            </main>
-            <Footer/>
-        </div>
+        <main class="content">
+            <article class="container">
+                <div class="info">
+                    <h1>"My Battleship Solver"</h1>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste, Repellendus odit nihil"</p>
+                    <form action="battleship">
+                    <button type="submit" >"Button name"</button>
+                    </form>
+                </div>
+                <div class="image">
+                    <img src="https://i.postimg.cc/65QxYYzh/001234.png"/>
+                </div>
+            </article>
+            <article class="container">
+                <div class="info">
+                    <h1>"Monster Hunter Calculator"</h1>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus odit nihil ullam nesciunt quidem iste, Repellendus odit nihil"</p>
+                    <form action="monster_hunter"><button type ="submit">"Button name 2"</button></form>
+                </div>
+                <div class="image">
+                    <img src="https://i.postimg.cc/65QxYYzh/001234.png"/>
+                </div>
+            </article>
+        </main>
         //<!-- End Landing Page -->
     }
 }

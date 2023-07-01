@@ -26,27 +26,30 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--bg-color-1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
   position: sticky;
-  top: 10;
+  top: 1vh;
   background-color: var(--bg-color-2);
   border-radius: 1.5rem;
 }
 
+main {
+  flex-grow: 1;
+}
+
 footer {
   display: flex;
-  // flex-direction: row; 
   justify-content: center;
   align-items: center;
   background-color: var(--bg-color-2);
   border-radius: 1.5rem;
   min-height: 40px;
-}
-
-main {
-  margin-top: 3rem;
+  margin-top: auto;
 }
 
 img {
@@ -55,6 +58,7 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--text-1);
 }
 
 .footer_link {
@@ -103,44 +107,44 @@ ul {
 /* End Global Rules */
 
 /* Start Landing Page */
-.landing-page header {
+header {
   min-height: 80px;
   display: flex;
 }
 
 @media (max-width: 767px) {
-  .landing-page header {
+  header {
     min-height: auto;
     display: initial;
   }
 }
 
-.landing-page header .container {
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 @media (max-width: 767px) {
-  .landing-page header .container {
+  header .container {
     flex-direction: column;
     justify-content: center;
   }
 }
 
-.landing-page header .logo {
+header .logo {
   color: var(--text-2);
   font-style: italic;
   text-transform: uppercase;
   font-size: 20px;
 }
 
-.landing-page header .logo:hover {
+header .logo:hover {
   color: var(--text-1);
 }
 
 @media (max-width: 767px) {
-  .landing-page header .logo {
+  header .logo {
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -152,60 +156,61 @@ ul {
 }
 
 @media (max-width: 767px) {
-  .landing-page header .links {
+  header .links {
     text-align: center;
     gap: 10px;
   }
 }
 
-.landing-page header .links li {
+header .links li {
   margin-left: 30px;
   color: var(--text-1);
   cursor: pointer;
   transition: 0.3s;
 }
-.landing-page header .links li a {
+header .links li a {
   color: var(--text-1);
 }
 
 @media (max-width: 767px) {
-  .landing-page header .links li {
+  header .links li {
     margin-left: auto;
   }
 }
 
-.landing-page header .links li:last-child {
+header .links li:last-child {
   border-radius: 20px;
   padding: 10px 20px;
   color: var(--button-text);
   background-color: var(--button-1);
   transition: var(--transition-time-2);
 }
-.landing-page header .links li:last-child:hover {
+header .links li:last-child:hover {
   background-color: var(--button-2);
   // font-size: larger; //FIXME: makes mobile-view glitch out
   transition: var(--transition-time-2);
 }
-.landing-page header .links li:last-child a {
+header .links li:last-child a {
   color: var(--button-text);
   transition: var(--transition-time-2);
 }
 
-.landing-page header .links li:not(:last-child) a:hover {
+header .links li:not(:last-child) a:hover {
   color: var(--button-2);
   transition: var(--transition-time-2);
 }
 
-.landing-page .content .container {
+.content .container {
   display: flex;
   //align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 140px;
-  // min-height: calc(100vh - 80px);
+  min-height: 90vh;
 }
 
 @media (max-width: 767px) {
-  .landing-page .content .container {
+  .content .container {
     gap: 0;
     min-height: calc(100vh - 101px);
     justify-content: center;
@@ -214,25 +219,25 @@ ul {
 }
 
 @media (max-width: 767px) {
-  .landing-page .content .info {
+  .content .info {
     text-align: center;
     margin-bottom: 15px;
   }
 }
 
-.landing-page .content .info h1 {
+.content .info h1 {
   color: var(--text-2);
   font-size: 44px;
 }
 
-.landing-page .content .info p {
+.content .info p {
   margin: 0;
   line-height: 1.6;
   font-size: 15px;
   color: var(--text-2);
 }
 
-.landing-page .content .info button {
+.content .info button {
   border: 0;
   border-radius: 20px;
   padding: 12px 30px;
@@ -243,13 +248,13 @@ ul {
   background-color: var(--button-1);
   transition: var(--transition-time-2);
 }
-.landing-page .content .info button:hover {
+.content .info button:hover {
   background-color: var(--button-2);
   // font-size: larger; //FIXME: makes mobile-view glitch out
   transition: var(--transition-time-2);
 }
 
-.landing-page .content .image img {
+.content .image img {
   max-width: 100%;
 }
 
