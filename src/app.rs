@@ -1,6 +1,8 @@
-use leptos::{ev::MouseEvent, *};
+use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
+
+use crate::battleship::Battleship;
 
 #[component]
 pub fn App(cx: Scope) -> impl IntoView {
@@ -20,11 +22,11 @@ pub fn App(cx: Scope) -> impl IntoView {
         // content for this welcome page
         <Router>
             <Header/>
-                <Routes>
-                    <Route path="" view=|cx| view! { cx, <HomePage/> }/>
-                    <Route path="battleship" view= |cx| view! {cx, <main>"Battleship Test"</main>} />
-                    <Route path="monster_hunter" view= |cx| view! {cx, <p>"Monster Hunter Test"</p>} />
-                </Routes>
+            <Routes>
+                <Route path="" view=|cx| view! { cx, <HomePage/> }/>
+                <Route path="battleship" view= |cx| view! {cx, <Battleship/>} />
+                <Route path="monster_hunter" view= |cx| view! {cx, <p>"Monster Hunter Test"</p>} />
+            </Routes>
             <Footer/>
         </Router>
     }

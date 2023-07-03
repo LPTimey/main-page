@@ -491,6 +491,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "battleship-solver"
+version = "0.1.0"
+source = "git+https://github.com/LPTimey/battleship-solver.git#f9efd271e98dec02185f3f8be02003def28a63f7"
+dependencies = [
+ "itertools",
+ "thiserror",
+]
+
+[[package]]
 name = "bitflags"
 version = "1.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2202,6 +2211,7 @@ version = "0.1.0"
 dependencies = [
  "actix-files",
  "actix-web",
+ "battleship-solver",
  "cargo-leptos",
  "cfg-if 1.0.0",
  "console_error_panic_hook",
